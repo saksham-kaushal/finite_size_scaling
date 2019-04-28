@@ -1,0 +1,64 @@
+%% \file   autoScale_docu.tex
+%  \brief  documentation of the autoScale.py program
+%
+%  \date   06.10.09
+%  \author Oliver Melchert
+%
+%  VERSION:
+%  1.00	- 06.10.09 (first edit)
+%  1.01 - 19.10.09 ! renamed program to autoScale.py
+\documentclass[12pt]{article}
+
+\usepackage[a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage[pdftex]{color}
+\usepackage{listings}
+
+\definecolor{light}{gray}{.85} 
+\usepackage[pdftex, draft=false, colorlinks=false, pdfborder={0 0 0}]{hyperref}
+
+\newcommand{\myProg}{{\tt autoScale.py}}
+\newcommand{\myVec}[1]{{\underline #1 }}
+\lstset{backgroundcolor=\color{light}}
+%\lstset{basicstyle=\ttfamily\scriptsize}
+\lstset{basicstyle=\bfseries\ttfamily\scriptsize}
+
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+\newcommand{\bibname}{Bib}
+
+\sloppy
+\begin{document}
+\begin{titlepage}
+\begin{center}
+{\LARGE \myProg{} -- A program for automatic finite-size scaling analyses: A user's guide}
+\vskip 0.5cm
+%\begin{quote}
+O.~Melchert\symbolfootnote[1]{
+E--mail:
+\mbox{{\tt melchert@theorie.physik.uni-oldenburg.de}}}\\
+\begin{small}
+\em{Institut f\"ur Physik, Carl-von-Ossietzky Universit\"at Oldenburg,\\ 
+26111 Oldenburg, Germany}\\
+\end{small}
+%\end{quote}
+\end{center}
+\vskip 1cm
+\begin{abstract}
+\myProg{} is a program that performs an automatic finite-size scaling analysis for
+given sets of simulated data. It implements a quite general scaling assumption
+and optimizes an initial set of scaling parameters that enforce a data collapse 
+of the different data sets. The presented guide describes how the program works,
+it presents a detailed example and finally gives some hints on how to
+improve the results of a scaling analysis.
+\end{abstract}
+\vskip 1cm
+\tableofcontents
+\end{titlepage}
+\include{autoScale_main}
+\end{document}
+%%% EOF: autoScale_docu.tex
